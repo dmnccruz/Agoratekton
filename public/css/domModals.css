@@ -1,0 +1,1780 @@
+#createArchiPostWrapper {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	width: 100%;
+	/* border: 5px solid green; */
+	position: fixed;
+	z-index: 5000;
+	animation: createArchiPostWrapper .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .15s ease-in-out;
+	pointer-events: none;
+}
+
+@keyframes createArchiPostWrapper { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#successPostArchi {
+	height: 700px;
+	width: 1150px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(68, 150, 81, 0.616);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	pointer-events: all;
+	animation: successPostArchi .25s; 
+	transition: .15s ease-in-out;
+	position: absolute;
+	font-family: 'Poppins', sans-serif;
+	font-size: 35px;
+	z-index: 9998;
+}
+
+@keyframes successPostArchi { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    }  
+} 
+
+#successPostArchi img {
+	filter: invert(100%);
+}
+
+#successPostArchi p {
+	margin-top: 50px; 
+}
+
+#createArchiPostWindow {
+	height: 700px;
+	width: 1150px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+	pointer-events: all;
+}
+
+#picturesWrapper {
+	height: 100%;
+	width: 60%;
+	border-right: 1px dashed rgba(202, 202, 202, 0.452);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#createCoverPhoto {
+	height: 60%;
+	width: 90%;
+	border: 2px dashed rgba(202, 202, 202, 0.452);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* filter: invert(100%); */
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+}
+
+#createSmallPhotosWrapper {
+	height: 30%;
+	width: 90%;
+	/* border: 2px solid green; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+input[type="file"] {
+	/* display: none; */
+	/* position: absolute; */
+	opacity: 0;
+	z-index: 1000;
+	right: 70px;
+  }
+  
+#createPhoto1 {
+	height: 100%;
+	width: 32%;
+	border: 1px dashed rgba(202, 202, 202, 0.452);
+	/* margin-right: 15px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+#createPhoto2 {
+	height: 100%;
+	width: 32%;
+	border: 1px dashed rgba(202, 202, 202, 0.452);
+	/* margin-right: 15px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+#createPhoto3 {
+	height: 100%;
+	width: 32%;
+	border: 1px dashed rgba(202, 202, 202, 0.452);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+#wordsWrapper {
+	height: 100%;
+	width: 40%;
+	/* border: 2px solid red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#createIcon {
+	height: 35%;
+	width: 100%;
+	/* border: 1px solid green; */
+	display: flex;	
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+	filter: invert(100%);
+}
+
+#projectTitle {
+	height: 10%;
+	width: 100%;
+	/* border: 1px solid green; */
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* #projectTitleInput {
+	height: 90%;
+	width: 100%;
+	outline: none;
+	border: none;
+
+} */
+
+.createArchiPostInputs {
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 90%;
+	border: none;
+	background: rgba(216, 216, 216, 0.301);
+	transition: .15s ease-in-out;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	/* text-align: center; */
+	color: rgb(228, 228, 228);
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	padding-left: 20px;
+	animation-iteration-count: 1.5;
+}
+
+.createArchiPostInputs::placeholder {
+	color: rgba(14, 14, 14, 0.493);
+}
+
+.createArchiPostInputs:hover {
+	border: 1px solid rgb(70, 70, 70);
+	background: rgb(224, 224, 224);
+	box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.1);
+	color: rgb(20, 20, 20);
+}
+
+.createArchiPostInputs:hover::placeholder{
+	color: rgb(20, 20, 20);
+}
+
+.createArchiPostInputs:focus::placeholder{
+	color: rgb(20, 20, 20);
+}
+
+.createArchiPostInputs:focus {
+	border: 1px solid rgb(70, 70, 70);
+	background: rgb(224, 224, 224);
+	box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.205);
+	color: rgb(20, 20, 20);
+}
+
+#projectBrief {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 35%;
+	width: 100%;
+	/* border: 1px solid green; */
+}
+
+#postButton {
+	height: 25%;
+	width: 100%;
+	/* border: 1px solid green; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* #postButton button {
+	height: 75px;
+	width: 175px;
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 25px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+} */
+
+/* #postButton button:hover {
+	background: rgba(106, 214, 96, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+	box-shadow: 0px 0px 10px 10px rgba(106, 214, 96, 0.11);
+} */
+
+.createPost2 {
+	height: 75px;
+	width: 175px;
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 25px;
+	/* margin: 5px; */
+	border: 1px solid white;
+	/* padding: 5px; */
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.createPost2:hover {
+	background: rgba(106, 214, 96, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+	box-shadow: 0px 0px 10px 10px rgba(106, 214, 96, 0.11);
+}
+
+#createArchiPostWindowHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: all;
+	/* z-index: 10; */
+}
+
+#createArchiPostWindowHorizontalLines1 {
+	height: 700px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: createArchiPostWindowHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes createArchiPostWindowHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#createArchiPostWindowVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: all;
+	/* z-index: 10; */
+}
+
+#createArchiPostWindowVerticalLines1 {
+	height: 100%;
+	width: 1150px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: createArchiPostWindowVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes createArchiPostWindowVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+/* DELETE POST ----------------------------------------------------------- */
+
+#deletePostWrapper {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	width: 100%;
+	/* border: 5px solid green; */
+	position: fixed;
+	z-index: 5000;
+	animation: deletePostWrapper .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .15s ease-in-out;
+	pointer-events: none;
+}
+
+@keyframes deletePostWrapper { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#deletePostWindow {
+	height: 300px;
+	width: 500px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(216, 46, 46, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+	pointer-events: all;
+	font-family: 'Poppins', sans-serif;
+	font-size: 25px;
+}
+
+#deletePostWindow img {
+	filter: invert(100%);
+}
+
+#deletePostButtons {
+	height: 25%;
+	width: 100%;
+	/* border: 1px solid green; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-direction: row;
+	margin: 2.5px;
+}
+
+#cancelDelete {
+	height: 50px;
+	width: 150px;
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 17.5px;
+	/* margin: 5px; */
+	border: 1px solid white;
+	/* padding: 5px; */
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#cancelDelete:hover {
+	background: rgba(106, 214, 96, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+	box-shadow: 0px 0px 10px 10px rgba(106, 214, 96, 0.11);
+}
+
+#confirmDelete {
+	height: 50px;
+	width: 150px;
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 17.5px;
+	/* margin: 5px; */
+	border: 1px solid white;
+	/* padding: 5px; */
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#confirmDelete:hover {
+	background: rgba(214, 68, 68, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+	box-shadow: 0px 0px 10px 10px rgba(214, 96, 96, 0.11);
+}
+
+#deletePostHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: all;
+	/* z-index: 10; */
+}
+
+#deletePostHorizontalLines1 {
+	height: 300px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: deletePostHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes deletePostHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#deletePostVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: all;
+	/* z-index: 10; */
+}
+
+#deletePostVerticalLines1 {
+	height: 100%;
+	width: 500px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: deletePostVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes deletePostVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+/* COMPOSE MESSAGE TIMELINE----------------------------------------------------------- */
+
+#composeMessageMainContainer {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: composeMessageMainContainer .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .15s ease-in-out;
+	pointer-events: none;
+}
+
+@keyframes composeMessageMainContainer { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#sendMessageSuccess {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 250px;
+	width: 400px;
+	border-radius: 15px;
+	background: rgba(0, 0, 0, 0.9);
+	color: rgb(118, 224, 108);
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	transition: .15s ease-in-out;
+	display: none;
+	pointer-events: none;
+	animation: sendMessageSuccess .25s; 
+	z-index: 9998;
+}
+
+@keyframes sendMessageSuccess { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#sendMessageSuccess img {
+	filter: invert(75%) sepia(100%) hue-rotate(60deg) brightness(100%);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+#composeMessageWindow {
+	height: 250px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	pointer-events: none;
+}
+
+#composeMessageWindow button {
+	position: absolute;
+	right: 32.5px;
+	bottom: 50px;
+	font-size: 30px;
+	transition: .15s ease-in-out;
+	pointer-events: all;
+	border: none;
+	outline: none;
+	background: none;
+	color: rgb(221, 221, 221);
+}
+
+#composeMessageWindow button:hover {
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+	transform: scale(1.1);
+}
+
+#composeMessageWindow button:active {
+	position: absolute;
+	right: 32.5px;
+	bottom: 50px;
+	font-size: 30px;
+	transform: scale(.95);
+}
+
+#composeMessageWindow button:disabled {
+	opacity: .3;
+}
+
+#composeMessageWindow img {
+	filter: invert(100%);
+	margin-bottom: 10px;
+	pointer-events: none;
+}
+
+#messageInput {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	color: rgb(219, 219, 219);
+	transition: .15s ease-in-out;
+	pointer-events: all;
+    animation-iteration-count: 1.5;
+}
+
+@keyframes shakeAndColor { 
+    0% { transform: translate(1px, 11px) rotate(0deg);     
+        background: rgb(184, 107, 107);
+        border: 1px dashed rgb(104, 25, 25);
+    }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(0deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg);
+        background: rgb(184, 107, 107);
+        border: 1px dashed rgb(104, 25, 25);
+    }
+} 
+
+#messageInput:hover {
+	background: rgb(145, 145, 145);
+}
+
+#messageInput:focus {
+	background: rgb(189, 189, 189);
+	color: rgb(46, 46, 46);
+}
+
+#messageInput:focus ~ button{
+	background: rgb(189, 189, 189);
+	color: rgb(46, 46, 46);
+}
+
+#messageInputContainer {
+	width: 90%;
+	height: 50px;
+	pointer-events: none;
+}
+
+#composeMessageWindow p {
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	margin-bottom: 10px;
+	pointer-events: none;
+}
+
+#composeMessageHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: none;
+}
+
+#composeMessageHorizontalLines1 {
+	height: 250px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: composeMessageHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes composeMessageHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#composeMessageVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: none;
+}
+
+#composeMessageVerticalLines1 {
+	height: 100%;
+	width: 400px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: composeMessageVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes composeMessageVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+/* CALL POP UPS RECEIEVER----------------------------------------------------------- */
+
+#meetingPopUpReceiver {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: meetingPopUpReceiver .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .15s ease-in-out;
+	pointer-events: none;
+}
+
+@keyframes meetingPopUpReceiver { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#callWrapper {
+	height: 250px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+	transition: .15s ease-in-out;
+}
+
+#callWrapper p {
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	margin-bottom: 10px;
+	pointer-events: none;
+}
+
+#callWrapper img {
+	filter: invert(75%) sepia(100%) hue-rotate(60deg) brightness(100%);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+#callWrapper button {
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 25px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+}
+
+#acceptButton:hover {
+	background: rgba(106, 214, 96, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#declineButton:hover {
+	background: rgba(228, 77, 77, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#callHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: none;
+}
+
+#callHorizontalLines1 {
+	height: 250px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: callHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes callHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#callVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: none;
+}
+
+#callVerticalLines1 {
+	height: 100%;
+	width: 400px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: callVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes callVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+/* CALL POP UPS CALLER----------------------------------------------------------- */
+
+#meetingPopUpCaller {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: meetingPopUpCaller .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .15s ease-in-out;
+	pointer-events: none;
+}
+
+@keyframes meetingPopUpCaller { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#callerWrapper {
+	height: 250px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	transition: .15s ease-in-out;
+	/* pointer-events: none; */
+}
+
+#callerWrapper img {
+	filter: invert(75%) sepia(100%) hue-rotate(60deg) brightness(100%);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+#callerWrapper button {
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 25px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+}
+
+#callerWrapper button:hover {
+	background: rgba(228, 77, 77, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#callerWrapper p {
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	margin-bottom: 10px;
+	pointer-events: none;
+}
+
+/* SET MEETING POPUP----------------------------------------------------------- */
+
+#setMeetingPopUp {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: setMeetingPopUp .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .3s ease-in-out;
+	pointer-events: none;
+}
+
+@keyframes setMeetingPopUp { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#infoWrapper {
+	height: 750px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	/* border: 1px solid rgba(0, 0, 0, 0.1); */
+	/* border: 2px solid red; */
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+}
+
+#userPic {
+	height: 25%;
+	width: 70%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	/* border: 2px solid red; */
+}
+
+#userAvatar {
+	border-radius: 100%;
+}
+
+#calendarIcon {
+	filter: invert(100%);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+#setExitButton {
+	position: absolute;
+	left: 93%;
+	bottom: 96%;
+	opacity: .5;
+	transition: .2s ease-in-out;
+	pointer-events: all; 
+}
+
+#setExitButton:hover {
+	transform: scale(1.3);
+	opacity: 1;
+}
+
+#setExitButton:active {
+	transform: scale(.9);
+}
+
+#setTitle {
+	height: 5%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-family: 'Poppins', sans-serif;
+	align-items: center;
+	flex-direction: row;
+	border-top: 1px solid rgba(255, 255, 255, 0.171);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+}
+
+hr {
+	width: 100%;
+	border-color: rgba(255, 255, 255, 0.212);
+}
+
+#dateWrapper {
+	height: 45%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+	pointer-events: all;
+}
+
+#topicInput {
+	height: 7.5%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+	transition: .15s ease-in-out;
+	pointer-events: all;
+    animation-iteration-count: 1.5;
+}
+
+#topicInput input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	color: rgb(219, 219, 219);
+	transition: .15s ease-in-out;
+	pointer-events: all;
+	animation-iteration-count: 1.5;
+	padding-left: 10px;
+}
+
+/* #topicInput input:hover {
+	background: rgb(145, 145, 145);
+} */
+
+#topicInput input:focus {
+	background: rgb(189, 189, 189);
+	color: rgb(46, 46, 46);
+	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.3);
+}
+
+#setMeetingButtonNotNow {
+	height: 17.5%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 25px;
+	/* border: 2px solid green; */
+	font-family: 'Poppins', sans-serif;
+	color: rgba(255, 255, 255, 0.377);
+}
+
+#setMeetingButtonNotNow button{
+	height: 50px;
+	width: 100px;
+	border: none;
+	outline: none;
+	background: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	margin: 5px;
+	font-size: 15px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .15s ease-in-out;
+	pointer-events: all;
+}
+
+#meetNow:hover  {
+	background: rgba(240, 92, 92, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#meetNow:active  {
+	transform: scale(.9);
+}
+
+#setDate:disabled  {
+	opacity: .3;
+}
+
+#setDate:hover  {
+	background: rgba(212, 212, 212, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#setDate:active  {
+	transform: scale(.9);
+}
+
+#setMeetingButtonNotNow p{
+	margin: 5px;
+}
+
+#setMeetingHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: none;
+}
+
+#setMeetingHorizontalLines1 {
+	height: 750px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: setMeetingHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes setMeetingHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#setMeetingVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: none;
+}
+
+#setMeetingVerticalLines1 {
+	height: 100%;
+	width: 400px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: setMeetingVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes setMeetingVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+#requestSent {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 750px;
+	width: 400px;
+	border-radius: 15px;
+	background: rgba(0, 0, 0, 0.9);
+	color: rgb(118, 224, 108);
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	transition: .15s ease-in-out;
+	display: none;
+	pointer-events: none;
+	animation: requestSent .25s; 
+	z-index: 9998;
+}
+
+@keyframes requestSent { 
+	0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+	} 
+} 
+
+#requestSent img {
+	filter: invert(75%) sepia(100%) hue-rotate(60deg) brightness(100%);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+/* REQUEST MEETING POPUP----------------------------------------------------------- */
+
+#requestMeetingPopUp {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: requestMeetingPopUp .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .3s ease-in-out;
+	/* pointer-events: none; */
+}
+
+@keyframes requestMeetingPopUp { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#requestWrapper {
+	height: 650px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	/* border: 1px solid rgba(0, 0, 0, 0.1); */
+	/* border: 2px solid red; */
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+}
+
+.requesttitles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 5%;
+	width: 100%;
+	color: rgb(151, 151, 151);
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	margin-top: 10px;
+	/* margin-bottom: 10px; */
+	pointer-events: none;
+}
+
+#requestName {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 5%;
+	width: 100%;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	margin-top: 10px;
+	/* margin-bottom: 10px; */
+	pointer-events: none;
+}
+
+#requestPic {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 35%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+}
+
+#requestPic img{
+	border-radius: 100%;
+}
+
+#requestTopic {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 15%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 27.5px;
+}
+
+#requestDate {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 15%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 25px;
+}
+
+#requestButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	height: 25%;
+}
+
+#requestAccept {
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+}
+
+#requestDecline {
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+}
+
+#requestAccept:hover {
+	background: rgba(106, 214, 96, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#requestDecline:hover {
+	background: rgba(228, 77, 77, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#requestMeetingHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: none;
+}
+
+#requestMeetingHorizontalLines1 {
+	height: 650px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: setMeetingHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes requestMeetingHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#requestMeetingVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: none;
+}
+
+#requestMeetingVerticalLines1 {
+	height: 100%;
+	width: 400px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: requestMeetingVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes requestMeetingVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+/* DECLINED MEETING POPUP----------------------------------------------------------- */
+
+#declinedRequestPopup {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: declinedRequestPopup .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .3s ease-in-out;
+	/* border: 2px solid green; */
+	/* pointer-events: none; */
+}
+
+@keyframes declinedRequestPopup { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#declinedRequestPopupWrapper {
+	height: 400px;
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	/* border: 1px solid rgba(0, 0, 0, 0.1); */
+	/* border: 2px solid red; */
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+}
+
+#declinedRequestPopupWrapper img {
+	margin-bottom: 15px;
+	filter: invert(75%) sepia(150%) hue-rotate(-360deg);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+#declinedRequestPopupWrapper p {
+	margin-bottom: 30px;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 15px;
+}
+
+#declinedRequestPopupWrapper button {
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+}
+
+#declinedRequestPopupWrapper button:hover {
+	background: rgba(228, 77, 77, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#declinedRequestHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: none;
+}
+
+#declinedRequestHorizontalLines1 {
+	height: 400px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: declinedRequestHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes declinedRequestHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#declinedRequestVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: none;
+}
+#declinedRequestVerticalLines1 {
+	height: 100%;
+	width: 300px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: declinedRequestVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes declinedRequestVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+/* APPROVED MEETING POPUP----------------------------------------------------------- */
+
+#approvedRequestPopup {
+	height: 100vh;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5000;
+	animation: approvedRequestPopup .25s; 
+	background: rgba(0, 0, 0, 0.75);
+	transition: .3s ease-in-out;
+	/* border: 2px solid green; */
+	/* pointer-events: none; */
+}
+
+@keyframes approvedRequestPopup { 
+    0% { 
+		opacity: 0;
+	} 
+	100% { 
+		opacity: 1;
+    } 
+} 
+
+#approvedRequestPopupWrapper {
+	height: 400px;
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(124, 124, 124, 0.5);
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	/* border: 1px solid rgba(0, 0, 0, 0.1); */
+	/* border: 2px solid red; */
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.35);
+	color: rgb(221, 221, 221);
+	z-index: 9997;
+	/* pointer-events: none; */
+}
+
+#approvedRequestPopupWrapper img {
+	margin-bottom: 15px;
+	filter: invert(75%) sepia(150%) hue-rotate(-360deg);
+	margin-bottom: 10px;	
+	pointer-events: none;
+}
+
+#approvedRequestPopupWrapper p {
+	margin-bottom: 30px;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 15px;
+}
+
+#approvedRequestPopupWrapper button {
+	border: none;
+	background: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 7.5px;
+	transition: .3s ease-in-out;
+	pointer-events: all;
+}
+
+#approvedRequestPopupWrapper button:hover {
+	background: rgba(77, 228, 115, 0.781);
+	color: rgb(43, 43, 43);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+#approvedRequestHorizontalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	position: absolute;
+	pointer-events: none;
+}
+
+#approvedRequestHorizontalLines1 {
+	height: 400px;
+	width: 100%;
+	border-top: 1px dashed rgba(207, 207, 207, 0.3);
+	border-bottom: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: approvedRequestHorizontalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes approvedRequestHorizontalLines1 { 
+    from { 
+		width: 0%;
+    } 
+} 
+
+#approvedRequestVerticalLines {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	position: absolute;
+	pointer-events: none;
+}
+#approvedRequestVerticalLines1 {
+	height: 100%;
+	width: 300px;
+	border-left: 1px dashed rgba(207, 207, 207, 0.3);
+	border-right: 1px dashed rgba(207, 207, 207, 0.3);
+	animation: declinedRequestVerticalLines1 4s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	position: relative;
+	pointer-events: none;
+}
+
+@keyframes approvedRequestVerticalLines1 { 
+    from { 
+		height: 0%;
+    } 
+} 
+
+
+

@@ -1,0 +1,64 @@
+body #magicMouseCursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.048);
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  transition: transform 0.07s, width 0.3s, height 0.3s;
+  pointer-events: none; 
+}
+
+body #magicMouseCursor.cursor-square {
+  border-radius: 0; 
+}
+
+body #magicPointer {
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s; 
+  z-index: 9999;
+}
+
+body #magicPointer.is-hover {
+  background: rgba(199, 199, 199, 0.116); 
+  border: 1px solid rgb(238, 238, 238);
+}
+
+body #magicPointer.pointer-blur {
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: 1px solid #fff;
+  /* box-shadow: 0px 0px 15px -5px white;  */
+}
+
+body #magicPointer.pointer-overlay {
+  height: 30px;
+  width: 30px;
+  mix-blend-mode: hard-light;
+  /* box-shadow: 0px 0px 15px -5px white;  */
+}
+
+body .magic-hover {
+  transition: all 0.2s; 
+}
+
+body .magic-hover:hover {
+  cursor: none; 
+}
+
+#magicMouseCursor {
+  background: rgba(255, 255, 255, 0.055) !important;
+  /* mix-blend-mode: difference; */
+}

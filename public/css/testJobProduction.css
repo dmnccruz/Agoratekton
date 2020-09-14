@@ -1,0 +1,492 @@
+.jobBadge {
+	font-family: 'Roboto', sans-serif;
+	background: rgba(58, 211, 91, 0.185);
+	border: 1px solid rgb(31, 139, 49);
+	border-radius: 7.5px;
+	font-size: 12.5px;
+	color: rgb(34, 134, 48);
+	padding: 2.5px;
+	margin-left: 10px;
+}
+
+.contentBoxJob {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* height: 300px; */
+	width: 100%;	
+	/* border-bottom: 1px solid rgba(201, 201, 201, 0.555);
+	border-top: 1px solid rgba(201, 201, 201, 0.514); */
+	/* border-top: 2px dashed rgb(119, 119, 119);
+	border-bottom: 2px dashed rgb(119, 119, 119); */
+	position: relative;
+	animation: contentBoxJob ease 1s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	transition: .2s ease-in-out;
+	left: 0px;
+}
+
+@keyframes contentBoxJob {
+	from {
+		opacity: 0;
+		left: -2000px;
+	}
+}
+
+.contentBoxJob:hover {
+	box-shadow: 5px 5px 25px 5px rgb(134, 134, 134);
+	background: rgba(189, 189, 189, 0.658);
+}
+
+.contentBoxContainerJob {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	height: 200px;
+	width: 100%;
+	border-bottom: 1px dashed rgba(150, 150, 150, 0.9);
+	border-top: 1px dashed rgba(150, 150, 150, 0.9);
+	transition: all .125s ease-in-out .2s;
+}
+
+.contentBoxContainerJob:hover {
+	border-bottom: 1px dashed rgb(131, 131, 131);
+	border-top: 1px dashed rgb(131, 131, 131);
+}
+
+.contentPicSpacer {
+	height: 7.5px;
+	width: 500px;
+	border: 2.5px solid rgb(61, 61, 61);
+	border-bottom: none;
+	border-top: none;
+}
+
+.contentPicSmall {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 500px;
+	/* border: 1px solid rgb(104, 98, 98); */
+	transition: all .125s ease-in-out .2s;
+	transition-property: border, height, width;
+	border: 2.5px solid rgb(61, 61, 61);
+	border-bottom: none;
+	border-top: none;
+}
+
+.contentJobFind {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	width: 500px;
+	min-width: 500px;
+	border: 1px solid rgb(104, 98, 98);
+	transition: all .125s ease-in-out .2s;
+	transition-property: border, height, width, background;
+	border-left: 2.5px solid rgb(61, 61, 61);
+	border-right: 2.5px solid rgb(61, 61, 61);
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(77, 77, 77);
+	background: rgb(211, 211, 211);
+}
+
+.jobText {
+	backdrop-filter: blur(5px);
+	/* border-top: 1px solid red; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: rgba(66, 66, 66, 0.486);
+	opacity: 1;
+	transition: .2s ease-in-out;
+}
+
+.jobText p {
+	color: rgb(218, 218, 218);
+	transition: .2s ease-in-out;
+}
+
+.jobText:hover p{
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 0px 25px rgb(219, 219, 219);
+}
+
+
+.contentJobFind:hover {
+	/* height: 450px;
+	width: 750px; */
+	border: 5px solid rgb(51, 51, 51);
+}
+
+.contentJobComments {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 500px;
+	/* border: 1px solid rgb(104, 98, 98); */
+	transition: all .125s ease-in-out .2s;
+	transition-property: border, height, width;
+	border: 2.5px solid rgb(61, 61, 61);
+	border-bottom: none;
+	border-top: none;
+	/* border: 2px solid red; */
+}
+
+.contentJobCommentsWindow {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 70%;
+	width: 100%;
+	border-top: 2px solid rgb(99, 99, 99);
+	border-bottom: 2px solid rgb(99, 99, 99);
+	background: rgb(189, 189, 189);
+	overflow-y: scroll;
+	/* overflow-x: hidden; */
+	background: rgb(121, 121, 121);
+}
+
+.contentJobCommentsWindowCommentWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	min-height: 40px;
+	width: 97.5%;
+	margin-top: 5px;
+	/* background: rgb(189, 189, 189); */
+	font-family: 'Poppins', sans-serif;
+	/* z-index: 1; */
+}
+
+.contentJobCommentsWindowPic {
+	height: 40px;
+	width: 40px;
+	border: 2px solid rgb(117, 117, 117);
+	border-radius: 100%;
+	background: rgb(189, 189, 189);
+	margin-right: 5px;
+}
+
+.contentJobCommentsWindowComment {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 100%;
+	flex-grow: 1;
+	border: 1px dashed rgb(56, 56, 56);
+	border-radius: 10px;
+	background: rgb(221, 221, 221);
+	font-size: 15px;
+	box-shadow: 0px 2.5px 5px 2.5px rgba(0, 0, 0, 0.11);
+	z-index: 2;
+}
+
+.commentName {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	/* width: 10%; */
+	/* border: 1px solid blue; */
+	margin-right: 2.5px;
+}
+
+.commentBody:disabled {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 90%;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	outline: none;
+	background: none;
+	opacity: 1;
+	/* border: 1px solid red; */
+}
+
+.commentBody {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 90%;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	outline: none;
+	/* background: none; */
+	opacity: 1;
+	/* border: 1px solid red; */
+}
+
+.commentButtons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	/* border: 1px solid yellow; */
+	/* width: 10%; */
+	font-size: 12.5px;
+}
+
+.editComment {
+	margin-right: 5px;
+	opacity: .5;
+	transition: .15s ease-in-out;
+}
+
+.editComment:hover {
+	opacity: .9;
+	transform: scale(1.1);
+}
+
+.deleteComment {
+	margin-right: 5px;
+	opacity: .5;
+	transition: .15s ease-in-out;
+}
+
+.deleteComment:hover {
+	opacity: .9;
+	transform: scale(1.1);
+}
+
+.contentJobCommentsInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 30%;
+	width: 100%;
+	background: rgb(189, 189, 189);
+	/* border: 1px solid red; */
+}
+
+.commentWord {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	width: 15%;
+	background: rgb(189, 189, 189);
+	font-family: 'Poppins', sans-serif;
+	font-size: 12.5px;
+	/* border: 1px solid red; */
+}
+
+.contentJobCommentsInputMain {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 85%;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	margin-left: 5px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12.5px;
+	width: 75%;
+	background: rgb(214, 214, 214);
+	border: 2px solid rgb(128, 128, 128);
+	padding-left: 10px;
+	transition: .5s ease-in-out;
+}
+
+.contentJobCommentsInputMain:focus {
+	/* border: 2px solid rgb(75, 75, 75); */
+	background: rgb(241, 241, 241);
+	box-shadow: 0px 0px 1px 1px rgba(230, 230, 230, 0.459)
+}
+
+.contentJobCommentsInputSend {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 25px;
+	height: 100%;
+	width: 10%;
+	background: rgb(189, 189, 189);
+	/* border: 1px solid red; */
+}
+
+.commentSendButton {
+	transition: .2s ease-in-out;
+	color: rgb(54, 54, 54);
+}
+
+.commentSendButton:hover {
+	transform: scale(1.2) rotate(5deg);
+	color: rgb(31, 31, 31);
+}
+
+.commentSendButton:active {
+	transform: scale(.95);
+}
+
+.contentButtonsJob {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	height: 50px;
+	width: 500px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	background: rgb(168, 168, 168);
+	border: 2.5px solid rgb(61, 61, 61);
+	border-top: 1px solid rgb(110, 110, 110);
+	box-shadow: 0px 7.5px 5px 0px rgba(134, 134, 134, 0.678);
+}
+
+.heartButton {
+	background: none;
+	outline: none;
+	border: none;
+	/* cursor: pointer; */
+	transition: .1s ease-in-out;
+	font-size: 20px;
+	color: rgb(167, 29, 29);
+	text-shadow: 0px 0px 5px rgba(167, 29, 29, 0)
+}
+
+.heartButton:hover {
+	color: rgb(226, 106, 106);
+	transform: scale(1.2);
+	text-shadow: 0px 0px 5px rgba(226, 106, 106, 1)
+}
+
+.loveWrapJob {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	/* margin-right: 3.75px; */
+	border-right: 1px solid rgba(92, 92, 92, .2);
+}
+
+.heartButton.fa.fa-heart-o {
+	margin-right: 5px;
+}
+
+.loveWrapJob:hover {
+	background: rgb(117, 117, 117);
+}
+
+.commentWrapJob {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	color: rgb(43, 43, 43);
+	margin-left: 3.75px;
+	border-left: 1px solid rgba(92, 92, 92, .2);
+	border-right: 1px solid rgba(92, 92, 92, .2);
+}
+
+.commentWrapJob:hover {
+	background: rgb(117, 117, 117);
+}
+
+.comment.fa.fa-comment-o {
+	margin-right: 5px;
+}
+
+.callWrapJob {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	color: rgb(43, 43, 43);
+	margin-left: 3.75px;
+	border-left: 1px solid rgba(92, 92, 92, .2);
+	border-right: 1px solid rgba(92, 92, 92, .2);
+}
+
+.callWrapJob:hover {
+	background: rgb(117, 117, 117);
+}
+
+.callIcon.fa.fa-comment-o {
+	margin-right: 5px;
+}
+
+.messageWrapJob {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	color: rgb(43, 43, 43);
+	margin-left: 3.75px;
+	border-left: 1px solid rgba(92, 92, 92, .2);
+}
+
+.messageWrapJob:hover {
+	background: rgb(117, 117, 117);
+}
+
+.messageIcon.fa.fa-comment-o {
+	margin-right: 5px;
+}
+
+.contentJobCommentsWindow::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	/* border-radius: 10px; */
+	/* background-color: #f5f5f500; */
+	background-color: #949494;
+	border-left: 2px solid rgb(204, 204, 204);
+}
+
+.contentJobCommentsWindow::-webkit-scrollbar {
+	width: 14px;
+}
+
+.contentJobCommentsWindow::-webkit-scrollbar-thumb {
+	background-clip: content-box;
+	border: 4px solid transparent;
+	border-radius: 7px;
+	box-shadow: inset 0 0 0 10px;
+	/* color: rgb(105, 105, 105); */
+	color: rgb(63, 63, 63);
+}
+
+.contentJobCommentsWindow::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+	display: none;
+}
+
+.contentJobCommentsWindow::-webkit-scrollbar-corner {
+	background-color: transparent;
+}

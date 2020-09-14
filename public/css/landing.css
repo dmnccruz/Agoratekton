@@ -1,0 +1,1198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: rgb(39, 39, 39);
+  animation: fadeInAnimation ease 2s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
+} 
+
+/* LOGIN FORMS WRAPPER----------------------------------------------------------------------------------------- */
+
+#loginFormsWrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  /* border: 5px solid green; */
+  animation: loginFormsWrapper .5s ease-in-out forwards; 
+  opacity: 1; 
+  z-index: 900;
+  display: none;
+  transition: 1s ease-in-out;
+}
+
+@keyframes loginFormsWrapper { 
+  from { 
+      opacity: 0; 
+  } 
+}
+
+#loginWindow {
+  height: 400px;
+  width: 450px;
+  border-radius: 10px;
+  background: rgba(19, 19, 19, 0.925);
+  backdrop-filter: blur(7.5px);
+  box-shadow: 5px 5px 50px 12.5px rgba(22, 22, 22, 0.548);
+  z-index: 100;
+  /* display: none; */
+}
+
+#exitLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: rgb(196, 67, 67);
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 10px;
+  top: 10px;
+  transition: .15s ease-in-out;
+  /* border: 1px solid white; */
+  z-index: 101;
+  opacity: .5;
+}
+
+#exitLogin:hover {
+  text-shadow: 0px 0px 25px rgb(196, 67, 67);
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+#exitLogin:active {
+  transform: scale(.99);
+}
+
+.loginInputForm {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  transition: .15s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* text-align: center; */
+  color: rgb(228, 228, 228);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  animation-iteration-count: 1.5;
+}
+
+.loginInputForm::placeholder {
+  color: rgba(228, 228, 228, 0.1);
+}
+
+.loginInputForm:hover {
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(224, 224, 224);
+  box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.1);
+  color: rgb(20, 20, 20);
+}
+
+.loginInputForm:hover::placeholder{
+  color: rgb(20, 20, 20);
+}
+
+.loginInputForm:focus::placeholder{
+  color: rgb(20, 20, 20);
+}
+
+.loginInputForm:focus {
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(224, 224, 224);
+  box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.205);
+  color: rgb(20, 20, 20);
+}
+
+#loginIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#loginIcon img {
+  filter: invert(100%);
+  pointer-events: none;
+}
+
+#loginEmail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 17.5%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#loginPassword {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 17.5%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#loginButton2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 25%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(228, 228, 228);
+  font-size: 25px;
+  transition: .2s ease-in-out;
+  border: 1px dashed rgba(255, 255, 255, 0.068);
+}
+
+#loginButton2:hover {
+  background: rgba(93, 255, 101, 0.479);
+  text-shadow: 0px 0px 25px rgb(212, 212, 212);
+  color: rgb(231, 231, 231);
+  box-shadow: 0px 0px 15px 25px rgba(93, 255, 101, 0.05);
+}
+
+#loginButton2:disabled {
+  opacity: .1
+}
+
+#loginButton2:active {
+  transform: scale(.975);
+}
+
+
+/* REGISTER FORMS WRAPPER----------------------------------------------------------------------------------------- */
+
+#registerFormsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  animation: registerFormsWrapper .5s ease-in-out forwards; 
+  z-index: 900;
+  display: none;
+  /* opacity: 1; */
+}
+
+@keyframes registerFormsWrapper { 
+  0% { 
+  opacity: 0;
+} 
+100% { 
+  opacity: 1;
+  } 
+} 
+
+#successRegisterWindow {
+  position: absolute;
+  height: 750px;
+  width: 450px;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  background: rgba(78, 136, 71, 0.925);
+  backdrop-filter: blur(7.5px);
+  box-shadow: 5px 5px 50px 12.5px rgba(77, 136, 71, 0.37);
+  z-index: 101;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: rgb(228, 228, 228);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-shadow: 0px 0px 25px rgb(235, 233, 233);
+  display: none;
+  animation: successRegisterWindow .5s ease-in-out forwards; 
+
+}
+
+@keyframes successRegisterWindow { 
+  0% { 
+  opacity: 0;
+} 
+100% { 
+  opacity: 1;
+  } 
+} 
+
+#successRegisterWindow img{
+  filter: invert(100%);
+	margin-bottom: 10px;	
+  pointer-events: none;
+  margin-bottom: 50px;
+}
+
+#registerWindow {
+  height: 750px;
+  width: 450px;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  background: rgba(19, 19, 19, 0.925);
+  backdrop-filter: blur(7.5px);
+  box-shadow: 5px 5px 50px 12.5px rgba(22, 22, 22, 0.548);
+  z-index: 100;
+}
+
+#exitRegister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: rgb(196, 67, 67);
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 10px;
+  top: 10px;
+  transition: .15s ease-in-out;
+  /* border: 1px solid white; */
+  z-index: 101;
+  opacity: .5;
+}
+
+#exitRegister:hover {
+  text-shadow: 0px 0px 25px rgb(196, 67, 67);
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+#exitRegister:active {
+  transform: scale(.99);
+}
+
+/* REGISTER FORM----------------------------------------------------------------------------------------- */
+
+#registerPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 35%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.registerInputForm {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  transition: .15s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* text-align: center; */
+  color: rgb(228, 228, 228);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  animation-iteration-count: 1.5;
+}
+
+.registerInputForm::placeholder {
+  color: rgba(228, 228, 228, 0.1);
+}
+
+.registerInputForm:hover {
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(224, 224, 224);
+  box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.1);
+  color: rgb(20, 20, 20);
+}
+
+.registerInputForm:hover::placeholder{
+  color: rgb(20, 20, 20);
+}
+
+.registerInputForm:focus::placeholder{
+  color: rgb(20, 20, 20);
+}
+
+.registerInputForm:focus {
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(224, 224, 224);
+  box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.205);
+  color: rgb(20, 20, 20);
+}
+
+#registerProfilePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 175px;
+  width: 175px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  transition: .15s ease-in-out;
+  /* pointer-events: none; */
+
+}
+
+#profilePic2{
+  filter: invert(100%);
+	margin-bottom: 10px;	
+  pointer-events: none;
+  z-index: -1;
+  /* border: 1px solid red; */
+  position: absolute;
+}
+
+input[type="file"] {
+  /* display: none; */
+  position: absolute;
+  opacity: 0;
+  z-index: 1000 ;
+  right: 70px;
+}
+
+#registerProfilePic:hover {
+  border: 2px dashed rgba(255, 255, 255, 0.9);
+}
+
+#registerProfilePicIcon {
+  font-size: 25px;
+  color: white;
+  transition: .15s ease-in-out;
+  opacity: .35;
+}
+
+#registerProfilePicIcon:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+#registerProfilePicIcon:active {
+  transform: scale(1.1);
+}
+
+#registerRole {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(228, 228, 228);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roles {
+  transition: .2s ease-in-out;
+  border-top: 1px solid rgb(158, 158, 158);
+  border-bottom: 1px solid rgb(158, 158, 158);
+}
+
+.roles:hover {
+  border: 1px solid rgb(192, 192, 192);
+  background: rgb(165, 165, 165);
+  box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.205);
+  color: rgb(26, 26, 26);
+}
+
+#roleRegular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 33.3%;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#roleArchitect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 33.3%;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#roleSupplier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 33.3%;
+}
+
+.roleActive {
+  border: 1px solid rgb(192, 192, 192);
+  background: rgb(165, 165, 165);
+  box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.205);
+  color: rgb(26, 26, 26);
+}
+
+#registerName {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#registerEmail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#registerPassword {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#registerConfirmPassword {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#registerButtonMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 15%;
+  width: 100%;
+  transition: .1s ease-in-out;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(228, 228, 228);
+  background: none;
+  outline: none;
+  font-size: 25px;
+  transition: .2s ease-in-out;
+  border: 1px dashed rgba(255, 255, 255, 0.068);
+}
+
+#registerButtonMain:hover {
+  background: rgba(93, 255, 101, 0.479);
+  text-shadow: 0px 0px 25px rgb(212, 212, 212);
+  color: rgb(231, 231, 231);
+  box-shadow: 0px 0px 15px 25px rgba(93, 255, 101, 0.05);
+}
+
+#registerButtonMain:active {
+  transform: scale(.975);
+}
+
+#registerButtonMain:disabled {
+  opacity: .3;
+}
+
+
+/* BUTTONS---------------------------------------------------------------------------------------------- */
+
+#buttonsWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  /* border: 5px solid green; */
+}
+
+#buttonsWrapperb {
+  height: 7.5%;
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-bottom: 225px;
+  z-index: 2;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+	font-size: 25px;
+	color: rgb(212, 212, 212);
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: row;
+  opacity: 0;
+  animation: buttonsWrapper .65s ease-in-out forwards 7s;
+  transform: scale(.01);
+}
+
+.buttons {
+  display: flex;
+	color: rgb(212, 212, 212);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 50px;
+  width: 150px;
+  margin-left: 12.5px;
+  margin-right: 12.5px;
+  border: 1px dashed rgba(255, 255, 255, 0.274);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.041);
+  transition: .2s ease-in-out;
+}
+
+@keyframes buttonsWrapper {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.buttons:hover {
+  background: rgba(255, 255, 255, 0.479);
+  text-shadow: 0px 0px 25px rgb(212, 212, 212);
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+
+.buttons:active {
+  transform: scale(.99);
+}
+
+/* WORDS---------------------------------------------------------------------------------------------- */
+
+#wordsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  /* animation: 2s fadeInAnimation3 ease;  */
+  /* opacity: 0%; */
+}
+
+@keyframes fadeInAnimation3 { 
+  0% { 
+      opacity: 100%; 
+  } 
+  100% { 
+      opacity: 0%; 
+  } 
+} 
+
+#agora {
+  animation: 4s fadeInAnimation2 3s; 
+  animation-iteration-count: 1; 
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards; */
+  opacity: 0%;
+}
+
+#agorameaning {
+  margin-bottom: 25px;
+  animation: 4s fadeInAnimation2 3.5s; 
+  animation-iteration-count: 1; 
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards; */
+  opacity: 0%;
+}
+
+#tekton {
+  animation: 4s fadeInAnimation2 4.5s; 
+  animation-iteration-count: 1; 
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards; */
+  opacity: 0%;
+}
+
+#tektonmeaning {
+  animation: 4s fadeInAnimation2 4s; 
+  animation-iteration-count: 1; 
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards; */
+  opacity: 0%;
+}
+
+@keyframes fadeInAnimation2 { 
+  0% {
+    opacity: 0%;
+  }
+
+  10% {
+    opacity: 100%;
+  }
+
+  20% {
+    opacity: 100%;
+  }
+
+  30% {
+    opacity: 100%;
+  }
+
+  40% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 100%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+  
+} 
+
+
+#wordsWrapper2 {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+/* HORIZONTAL LINES---------------------------------------------------------------------------------------------- */
+
+#linesWrap2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+#horizontalLine {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  flex-direction: row;
+  height: 21%;
+  width: 100%;
+  position: absolute;
+  border-top: 3px dashed rgba(255, 255, 255, 0.05);
+  border-bottom: 3px dashed rgba(255, 255, 255, 0.05);
+  right: 100%;
+  animation: horizontalLine 3s ease-in-out forwards 5.75s;
+}
+
+@keyframes horizontalLine {
+  to {
+    right: 0%;
+  }
+}
+
+.svgLetterLines2 {
+  width: 33.333%; 
+  height: 100%; 
+  border-left: 1px dashed rgba(255, 255, 255, 0.3);
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+#horizontalLineb {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  border-top: 2px dashed rgba(255, 255, 255, 0.1);
+}
+
+#horizontalLine2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  border-top: 2px dashed rgba(255, 255, 255, 0.3);
+  left: 100%;
+  animation: horizontalLine2 6s ease-in-out forwards 5.75s;
+}
+
+@keyframes horizontalLine2 {
+  to {
+    left: 0%;
+  }
+}
+
+#horizontalLine3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
+  left: 100%;
+  animation: horizontalLine3 3s ease-in-out forwards 5.75s;
+  z-index: 10;
+}
+
+@keyframes horizontalLine3 {
+  to {
+    left: 0%;
+  }
+}
+
+/* VERTICAL LINES---------------------------------------------------------------------------------------------- */
+
+#linesWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+#linesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.svgLetterLines {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  flex-direction: row;
+  width: 200px;
+  height: 0%;
+  border-left: 1px dashed rgba(255, 255, 255, 0.25);
+}
+
+/* SVG---------------------------------------------------------------------------------------------- */
+
+#agoraWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+#svgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+  
+.svgLetter {
+  width: 200px;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+svg {
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 12px rgba(0, 0, 0, .7));
+}
+
+#agora1 path{
+	stroke-dasharray: 2163;
+	stroke-dashoffset: 2163;
+	animation: agora1 5s ease-in-out forwards 7s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora2 path{
+	stroke-dasharray: 2215;
+	stroke-dashoffset: 2215;
+	animation: agora1 5s ease-in-out forwards 8s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora3 path{
+	stroke-dasharray: 2267;
+	stroke-dashoffset: 2267;
+	animation: agora1 5s ease-in-out forwards 12s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora4 path{
+	stroke-dasharray: 2500;
+	stroke-dashoffset: 2500;
+	animation: agora1 5s ease-in-out forwards 7.5s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora5 path{
+	stroke-dasharray: 2163;
+	stroke-dashoffset: 2163;
+	animation: agora1 5s ease-in-out forwards 9s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora6 path{
+	stroke-dasharray: 1440;
+	stroke-dashoffset: 1440;
+	animation: agora1 5s ease-in-out forwards 8s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora7 path{
+	stroke-dasharray: 2622;
+	stroke-dashoffset: 2622;
+	animation: agora1 5s ease-in-out forwards 11s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora8 path{
+	stroke-dasharray: 2119;
+	stroke-dashoffset: 2119;
+	animation: agora1 5s ease-in-out forwards 7s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora9 path{
+	stroke-dasharray: 1440;
+	stroke-dashoffset: 1440;
+	animation: agora1 5s ease-in-out forwards 8s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora10 path{
+	stroke-dasharray: 2267;
+	stroke-dashoffset: 2267;
+	animation: agora1 5s ease-in-out forwards 12s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+#agora11 path{
+	stroke-dasharray: 2973;
+	stroke-dashoffset: 2973;
+  animation: agora1 5s ease-in-out forwards 10s;
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+  fill: transparent;
+}
+
+@keyframes agora1 {
+	0% {
+  }
+  20% {
+  }
+  40% {
+  }
+  60% {
+    stroke-dashoffset: 0;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+	}
+}
+
+#a {
+  animation: asqd 3s ease-in-out forwards 4s;
+}
+
+#g {
+  animation: asqd 6s ease-in-out forwards 4.25s;
+}
+
+#o {
+  animation: asqd 3s ease-in-out forwards 4.5s;
+}
+
+#r {
+  animation: asqd 3s ease-in-out forwards 4.75s;
+  z-index: 5;
+}
+
+#a2 {
+  animation: asqd 3s ease-in-out forwards 6s;
+  z-index: 5;
+}
+
+#t {
+  animation: asqd 5s ease-in-out forwards 5.75s;
+}
+
+#e {
+  animation: asqd 3s ease-in-out forwards 6s;
+}
+
+#k {
+  animation: asqd 2s ease-in-out forwards 6.25s;
+  z-index: 5;
+}
+
+#t2 {
+  animation: asqd 3s ease-in-out forwards 6.5s;
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+  z-index: 5;
+
+}
+#o2 {
+  animation: asqd 3s ease-in-out forwards 6.75s;
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+  border-left: none;
+}
+#n {
+  animation: asqd 1s ease-in-out forwards 7s;
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+  border-left: none;
+}
+
+@keyframes asqd {
+  to {
+    height: 100%;
+  }
+}
+
+.svgLetterLines2 {
+  width: 33.333%; 
+  height: 100%; 
+  border-left: 1px dashed rgba(255, 255, 255, 0.1);
+  border-right: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* MODEL---------------------------------------------------------------------------------------------- */
+
+canvas {
+  position: absolute;
+  /* transform: scale(1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: canvas .65s ease-in-out forwards 17s;
+  transform: scale(.01);
+}
+
+@keyframes canvas {
+  to {
+    transform: scale(1);
+  opacity: 1  ;
+
+  }
+}
+
+/* CIRCLE---------------------------------------------------------------------------------------------- */
+
+.loader {
+  position: absolute;
+  border: 1px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1px solid #4d4d4d;
+  border-bottom: 1px solid #4d4d4d;
+  width: 100vh;
+  height: 100%;
+  animation: spin 10s linear infinite;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loaderBox {
+  height: 100%;
+  width: 1px;
+  animation: spin 40s linear infinite;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+#loaderBox2 {
+  height: 100%;
+  width: 1px;
+  animation: spin 15s linear infinite;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+#loaderWrapper {
+  width: 100vh;
+  height: 100%;
+  position: absolute;
+  animation: loaderWrapper 5s linear forwards 15s;
+  opacity: 0;
+}
+
+@keyframes loaderWrapper {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes shakeAndColor { 
+    0% { transform: translate(1px, 11px) rotate(0deg);     
+        background: rgb(196, 83, 83);
+        /* border: 1px dashed rgb(104, 25, 25); */
+    }
+    10% { transform: translate(-1px, -2px) ; }
+    20% { transform: translate(-3px, 0px) ; }
+    30% { transform: translate(3px, 2px) ; }
+    40% { transform: translate(1px, -1px) ; }
+    50% { transform: translate(-1px, 2px) ; }
+    60% { transform: translate(-3px, 1px) ; }
+    70% { transform: translate(3px, 1px) ; }
+    80% { transform: translate(-1px, -1px) ; }
+    90% { transform: translate(1px, 2px) ; }
+    100% { transform: translate(0px, 0px) ;
+      background: rgb(196, 83, 83);
+      /* border: 1px dashed rgb(104, 25, 25); */
+    }
+} 
+
+
+
+.tippy-box {
+	font-size: 20px;
+	border: 1px solid rgba(0, 0, 0, 0);
+	/* background-color: rgb(98, 179, 82); */
+	background-color: rgb(236, 122, 122);
+	/* z-index: 1000000; */
+	
+	}
+	
+	.tippy-arrow {
+		background-color: rgb(221, 114, 114);
+		color: rgb(202, 109, 109);
+		/* z-index: 10000; */
+	
+	}
+	
+	#tippy-1,
+	#tippy-2,
+	#tippy-3,
+	#tippy-4,
+	#tippy-5,
+	#tippy-6,
+	#tippy-7,
+	#tippy-8,
+	#tippy-9,
+	#tippy-10,
+	#tippy-11,
+	#tippy-12,
+	#tippy-13,
+	#tippy-14,
+	#tippy-15,
+	#tippy-16,
+	#tippy-17,
+	#tippy-18,
+	#tippy-19,
+	#tippy-20,
+	#tippy-21,
+	#tippy-22,
+	#tippy-23,
+	#tippy-24,
+	#tippy-25 {
+		font-size: 10px;
+		font-family: 'Roboto';
+		/* z-index: 1000000000; */
+	}

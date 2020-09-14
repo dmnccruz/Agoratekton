@@ -1,0 +1,237 @@
+.productBadge {
+	font-family: 'Roboto', sans-serif;
+	background: rgba(58, 58, 211, 0.185);
+	border: 1px solid rgb(58, 58, 211);
+	border-radius: 7.5px;
+	font-size: 12.5px;
+	color: rgb(58, 58, 211);
+	padding: 2.5px;
+	margin-left: 10px;
+}
+
+.contentBoxProduct {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* height: 300px; */
+	width: 100%;	
+	/* border-bottom: 1px solid rgba(201, 201, 201, 0.555);
+	border-top: 1px solid rgba(201, 201, 201, 0.514); */
+	/* border-top: 2px dashed rgb(119, 119, 119);
+	border-bottom: 2px dashed rgb(119, 119, 119); */
+	position: relative;
+	animation: contentBoxProduct ease 1s; 
+	animation-timing-function: cubic-bezier(.53,-0.01,.26,.98);
+	transition: .2s ease-in-out;
+	left: 0px;
+}
+
+@keyframes contentBoxProduct {
+	from {
+		opacity: 0;
+		left: -3000px;
+	}
+}
+
+.contentBoxProduct:hover {
+	box-shadow: 5px 5px 25px 5px rgb(134, 134, 134);
+	background: rgba(189, 189, 189, 0.658);
+}
+
+.contentBoxContainerProduct {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	height: 300px;
+	width: 100%;
+	border-bottom: 1px dashed rgba(150, 150, 150, 0.9);
+	border-top: 1px dashed rgba(150, 150, 150, 0.9);
+	transition: all .125s ease-in-out .2s;
+}
+
+.contentBoxContainerProduct:hover {
+	border-bottom: 1px dashed rgb(131, 131, 131);
+	border-top: 1px dashed rgb(131, 131, 131);
+}
+
+.contentPicSpacer {
+	height: 7.5px;
+	width: 500px;
+	border: 2.5px solid rgb(61, 61, 61);
+	border-bottom: none;
+	border-top: none;
+}
+
+.contentPicSmall {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 500px;
+	/* border: 1px solid rgb(104, 98, 98); */
+	transition: all .125s ease-in-out .2s;
+	transition-property: border, height, width;
+	border: 2.5px solid rgb(61, 61, 61);
+	border-bottom: none;
+	border-top: none;
+}
+
+.contentProductFind {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	width: 500px;
+	min-width: 500px;
+	border: 1px solid rgb(104, 98, 98);
+	transition: all .125s ease-in-out .2s;
+	transition-property: border, height, width, background;
+	border-left: 2.5px solid rgb(61, 61, 61);
+	border-right: 2.5px solid rgb(61, 61, 61);
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(77, 77, 77);
+	background: rgb(211, 211, 211);
+}
+
+.productText {
+	backdrop-filter: blur(5px);
+	/* border-top: 1px solid red; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	background: rgba(66, 66, 66, 0.486);
+	opacity: 1;
+	transition: .2s ease-in-out;
+}
+
+.productText p {
+	color: rgb(218, 218, 218);
+	transition: .2s ease-in-out;
+}
+
+.productText:hover p{
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 0px 25px rgb(219, 219, 219);
+}
+
+.contentProductFind:hover {
+	border: 5px solid rgb(51, 51, 51);
+}
+
+.contentButtonsProduct {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	height: 50px;
+	width: 500px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	background: rgb(168, 168, 168);
+	border: 2.5px solid rgb(61, 61, 61);
+	border-top: 1px solid rgb(110, 110, 110);
+	box-shadow: 0px 7.5px 5px 0px rgba(134, 134, 134, 0.678);
+}
+
+.heartButton {
+	background: none;
+	outline: none;
+	border: none;
+	/* cursor: pointer; */
+	transition: .1s ease-in-out;
+	font-size: 20px;
+	color: rgb(167, 29, 29);
+	text-shadow: 0px 0px 5px rgba(167, 29, 29, 0)
+}
+
+.heartButton:hover {
+	color: rgb(226, 106, 106);
+	transform: scale(1.2);
+	text-shadow: 0px 0px 5px rgba(226, 106, 106, 1)
+}
+
+.loveWrapProduct {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	border-right: 1px solid rgba(92, 92, 92, .2);
+}
+
+.heartButton.fa.fa-heart-o {
+	margin-right: 5px;
+}
+
+.loveWrapProduct:hover {
+	background: rgb(117, 117, 117);
+}
+
+.qouteWrapProduct {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	color: rgb(43, 43, 43);
+	margin-left: 3.75px;
+	border-left: 1px solid rgba(92, 92, 92, .2);
+	border-right: 1px solid rgba(92, 92, 92, .2);
+}
+
+.qouteWrapProduct:hover {
+	background: rgb(117, 117, 117);
+}
+
+
+.callWrapProduct {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	color: rgb(43, 43, 43);
+	margin-left: 3.75px;
+	border-left: 1px solid rgba(92, 92, 92, .2);
+	border-right: 1px solid rgba(92, 92, 92, .2);
+}
+
+.callWrapProduct:hover {
+	background: rgb(117, 117, 117);
+}
+
+.callIcon.fa.fa-comment-o {
+	margin-right: 5px;
+}
+
+.messageWrapProduct {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 25%;
+	transition: .25s ease-in-out;
+	color: rgb(43, 43, 43);
+	margin-left: 3.75px;
+	border-left: 1px solid rgba(92, 92, 92, .2);
+}
+
+.messageWrapProduct:hover {
+	background: rgb(117, 117, 117);
+}
+
+.messageIcon.fa.fa-comment-o {
+	margin-right: 5px;
+}
+
